@@ -1,0 +1,26 @@
+.btn-simple {
+    background-color: transparent!important;
+
+    &:hover {
+        color: white!important;
+    }
+}
+
+.btn {
+    .btn-link {
+        background-color: transparent!important;
+        text-transform: capitalize;
+    }
+}
+
+.btn-search {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    background-color: transparent;
+    border: 1px solid white;
+    margin-left: 15px;
+}

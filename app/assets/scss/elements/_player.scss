@@ -1,0 +1,27 @@
+.btn-player {
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    background-color: transparent;
+    border: none;
+}
+
+.play {
+    color: #00b304;
+}
+
+.stop {
+    color: #dd0808;
+}
+
+.player {
+    margin-top: 10px;
+    background-color:rgba(50, 49, 49, 0.7);
+    width: 100%;
+
+    .card-image & {
+        position: absolute;
+        bottom: 0;
+
+    }
+}

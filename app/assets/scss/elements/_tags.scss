@@ -1,0 +1,17 @@
+.tags-icons {
+    font-weight: normal;
+    text-transform: capitalize;
+    line-height: 23px;
+}
+
+.fa-dot-circle{
+    &:before {
+        font-size: 20px;
+        font-weight: bold;
+        border: 2px solid#b1acac;
+        color:#474040;
+        border-radius: 3px;
+        background-color:#a49f9f;
+    }
+}
+

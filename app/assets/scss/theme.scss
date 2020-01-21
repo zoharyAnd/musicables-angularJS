@@ -1,0 +1,26 @@
+@import "now-ui-kit";
+@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css";
+
+@import "elements/alert";
+@import "elements/all";
+@import "elements/buttons";
+@import "elements/cards";
+@import "elements/dropdown";
+@import "elements/forms";
+@import "elements/modal";
+@import "elements/pagination";
+@import "elements/player";
+@import "elements/progress";
+@import "elements/slider";
+@import "elements/switch";
+@import "elements/tabs";
+@import "elements/tags";
+
+@import "musicables/album";
+@import "musicables/all";
+@import "musicables/artist";
+@import "musicables/card";
+
+nav, footer {
+    background-color: black;
+}

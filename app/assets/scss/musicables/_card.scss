@@ -1,0 +1,27 @@
+.songs-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .card {
+        width: 300px;
+        margin: 20px;
+        
+    }
+}
+
+.card-image {
+    margin: -15px;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.card-data {
+    margin-top: 30px;
+
+    p {
+        text-transform: capitalize;
+    }
+}
+

@@ -1,0 +1,46 @@
+#artistDetails {
+    .modal-dialog {
+        max-width: 100%;
+        margin: 25px;
+    }
+
+    .track-wrapper {
+        width: 50%;
+        display: inline-flex;
+        height: 100px;
+        flex-wrap: wrap;
+    }
+
+    .modal-body{
+        padding-top: 0;
+    }
+}
+
+.album-image {
+    width: 100px;
+    height: 100px;
+}
+
+.modal-text{
+    padding: 40px 20px 0 20px;
+
+    h5 {
+        font-weight: bold;
+        font-size: 20px;
+    }
+}
+
+.artist-bio {
+    line-height: 30px;
+    font-size:15px;
+
+    i {
+        color: #6e6ee2;
+        font-style: normal;
+    }
+}
+
+.author {
+    color: gray;
+    font-style: italic;
+}

@@ -1,0 +1,30 @@
+.form-group {
+    input {
+        height: 40px;
+    }
+
+
+}
+
+.search-bar {
+    max-width: 300px;
+    height: 40px;
+    margin-bottom: 0px;
+    margin-left: auto;
+
+    .input-group {
+        margin-bottom: 0;
+        height: 40px;
+    }
+    
+    .input-group-text {
+        background-color:transparent;
+        color:white;
+        border-left: none;
+        
+        i {
+            margin-left: 15px;
+        }
+    }
+}
+
