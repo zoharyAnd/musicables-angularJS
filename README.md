@@ -11,9 +11,9 @@ These instructions will get you a copy of the project up and running on your loc
 First you will need to install **NodeJs** , **npm** on your computer.
 Before starting the project: 
 * Subscribe to [Firebase](https://firebase.google.com/) and add a project to your console to store our user data.
-    Replace the Firebase credentials with your newly created one
+    </br> Replace the Firebase credentials with your newly created one
 * Subscribe to [Napster API](https://developer.napster.com/api/v2.2#overview) to get an API key for your application
-    Replace the NapsterApiKey in each call within the project with your newly Api key
+    </br> Replace the NapsterApiKey in each call within the project with your newly Api key
     
 Run
 ```
