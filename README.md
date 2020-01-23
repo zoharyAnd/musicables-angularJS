@@ -29,9 +29,11 @@ npm start
 ## This portfolio was Built With
 
 * [AngularJs](https://angularjs.org/)
+* [Napster API](https://developer.napster.com/api/v2.2#overview) - As a source to fetch all the data
+* [CreateJS](https://createjs.com/getting-started/soundjsf) - For listening to the media directly
 * [Firebase](https://firebase.google.com/) 
 * [Gulp](https://gulpjs.com/) 
 
-## Authors
+## Author
 
 **Zohary Andrianome**
