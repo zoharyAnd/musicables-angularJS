@@ -1,0 +1,47 @@
+<div ng-controller="artistdetailController" class="container">
+    <div ng-repeat="artist in theArtist" class="whiteContent" >
+        <div class="artist-details-banner">
+            <div class="artist-details-image">
+                <img src={{artist.image}} alt={{artist.name}}/>
+            </div>
+            <div class="artist-details-name">
+                {{title}}
+            </div>
+        </div>
+        
+        
+        <p>{{artist.bio}}</p>
+        <p>{{artist.blurb}}</p>
+        <p><em>-- {{artist.bioAuthor}}</em></p>
+        
+        <h2 class="artist-detail-albums">Albums ({{artist.nbAlbums}}) </h2>
+    </div>
+
+    <div class="songs-wrapper">
+        <a ng-repeat="album in theAlbums" class="card album-card" id={{album.id}} type="button"data-toggle="modal" data-target="#albumDetails" ng-click="showDetails(album.id);">
+            <div class="card-image">
+                <img src={{album.image}} alt={{album.name}}/>
+                <div class="tags-icons two-col nb-tracks">
+                    <div>
+                        <i class="fas fa-music"></i>
+                        {{album.tracks}} Tracks
+                    </div>
+                    
+                    <div>
+                        <i class="far fa-calendar-alt"></i>
+                        {{album.date}}
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="card-data">
+                <p>{{album.name}}</p>
+                <p>by {{album.artist}}</p>
+                <p class="tags-icons">
+                    <i class="fas fa-tags"></i>
+                    {{album.label}}
+                </p>
+            </div>
+        </a>
+    </div>
+</div>

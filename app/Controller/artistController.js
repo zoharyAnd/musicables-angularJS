@@ -17,10 +17,9 @@ angular.module('artistModule').controller('artistController', ['$scope', '$http'
   $scope.artists = []; 
   $http({
     method: 'get', 
-    url: 'http://api.napster.com/v2.2/artists/top?apikey=your_napster_apiKey'
+    url: 'https://api.napster.com/v2.2/artists/top?your_napster_api_key'
     
   }).then(function (response) {
-      
       var data = response.data.artists;
       for(var i=0; i < data.length; i++){
         var allArtists = {
@@ -33,34 +32,34 @@ angular.module('artistModule').controller('artistController', ['$scope', '$http'
             bioAuthor: data[i].bios[0].author,
             blurb: data[i].blurbs[0]
         };
-        $scope.artists.push(allArtists);
+           $scope.artists.push(allArtists);
       }
     },function (error){
       console.log(error, 'can not get data.');
   }); //end request
 
-  //onclick of show modal 
-  $scope.showDetails = function(artistIndex){
-    var artistId = $scope.artists[artistIndex].id;
-    var artistImage = $scope.artists[artistIndex].image;
-    var artistName = $scope.artists[artistIndex].name;
-    var artistBio = $scope.artists[artistIndex].bio;
-    var artistBioAuthor = $scope.artists[artistIndex].bioAuthor;
-    var artistBioB = $scope.artists[artistIndex].blurb;
+  // //onclick of show modal 
+  // $scope.showDetails = function(artistIndex){
+  //   var artistId = $scope.artists[artistIndex].id;
+  //   var artistImage = $scope.artists[artistIndex].image;
+  //   var artistName = $scope.artists[artistIndex].name;
+  //   var artistBio = $scope.artists[artistIndex].bio;
+  //   var artistBioAuthor = $scope.artists[artistIndex].bioAuthor;
+  //   var artistBioB = $scope.artists[artistIndex].blurb;
     
-    showArtistDetails(artistId, artistImage, artistName, artistBio, artistBioAuthor, artistBioB);
-  }; // end show details
+  //   showArtistDetails(artistId, artistImage, artistName, artistBio, artistBioAuthor, artistBioB);
+  // }; // end show details
 
-  $scope.showDetailsSearched = function(artistIndex){
-    var artistId = $scope.searchedArtists[artistIndex].id;
-    var artistImage = $scope.searchedArtists[artistIndex].image;
-    var artistName = $scope.searchedArtists[artistIndex].name;
-    var artistBio = $scope.searchedArtists[artistIndex].bio;
-    var artistBioAuthor = $scope.artists[artistIndex].bioAuthor;
-    var artistBioB = $scope.artists[artistIndex].blurb;
+  // $scope.showDetailsSearched = function(artistIndex){
+  //   var artistId = $scope.searchedArtists[artistIndex].id;
+  //   var artistImage = $scope.searchedArtists[artistIndex].image;
+  //   var artistName = $scope.searchedArtists[artistIndex].name;
+  //   var artistBio = $scope.searchedArtists[artistIndex].bio;
+  //   var artistBioAuthor = $scope.artists[artistIndex].bioAuthor;
+  //   var artistBioB = $scope.artists[artistIndex].blurb;
 
-    showArtistDetails(artistId, artistImage, artistName, artistBio, artistBioAuthor, artistBioB);
-  }; // end show details searched
+  //   showArtistDetails(artistId, artistImage, artistName, artistBio, artistBioAuthor, artistBioB);
+  // }; // end show details searched
 
 
   //SEARCH ARTIST
@@ -70,7 +69,7 @@ angular.module('artistModule').controller('artistController', ['$scope', '$http'
     $scope.searchedArtists = []; 
     $http({
       method: 'get', 
-      url: 'http://api.napster.com/v2.2/search?apikey=your_napster_apiKey&query='+artistName+'&type=artist'
+      url: 'https://api.napster.com/v2.2/search?your_napster_api_key&query='+artistName+'&type=artist'
       
     }).then(function (response) {
         

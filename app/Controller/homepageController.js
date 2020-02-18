@@ -18,7 +18,7 @@ angular.module('homepageModule').controller('homepageController', ['$scope', '$h
   
   $http({
     method: 'get', 
-    url: 'http://api.napster.com/v2.2/tracks/top?apikey=your_napster_apiKey'
+    url: 'https://api.napster.com/v2.2/tracks/top?your_napster_api_key'
     
   }).then(function (response) {
       
@@ -42,7 +42,7 @@ angular.module('homepageModule').controller('homepageController', ['$scope', '$h
   $scope.genres = []; 
   $http({
     method: 'get', 
-    url: 'http://api.napster.com/v2.2/genres?apikey=your_napster_apiKey'
+    url: 'https://api.napster.com/v2.2/genres?your_napster_api_key'
     
   }).then(function (response) {
       
@@ -74,7 +74,7 @@ angular.module('homepageModule').controller('homepageController', ['$scope', '$h
     $scope.searchedTracks = []; 
     $http({
       method: 'get', 
-      url: 'http://api.napster.com/v2.2/search?apikey=your_napster_apiKey&query='+trackName+'&type=track'
+      url: 'https://api.napster.com/v2.2/search?your_napster_api_key&query='+trackName+'&type=track'
       
     }).then(function (response) {
         

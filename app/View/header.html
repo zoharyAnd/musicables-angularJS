@@ -1,0 +1,111 @@
+<!--Main Navigation-->
+<header ng-controller="homepageController">
+
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+      <a class="navbar-brand" href="#"><strong>Musicables</strong></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Top tracks <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/#!/album">New Albums</a>
+          </li>
+          <li class="nav-item">
+            <div class="dropdown">
+              <a class="nav-link dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown"> Genres </a>
+              <div  class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a ng-repeat="genre in genres" class="dropdown-item" href="/#!/genre/{{genre.name}}" >{{genre.name}}</a>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/#!/artist">Artists</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav nav-flex-icons">
+          <li class="nav-item">
+            <div id="username"></div>
+          </li>
+          <li class="nav-item">
+            <!-- <a class="nav-link"><i class="fab fa-facebook-f"></i></a> -->
+            <button type="button" class="btn" data-toggle="modal" data-target="#loginModal" id="login" onclick="login()" >Login</button>
+            <button type="button" class="btn" data-toggle="modal" data-target="#loginModal" id="register" onclick="register()">Register</button>
+            <button type="button" class="btn" id="logout">Log Out</button>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link"><i class="fab fa-twitter"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"><i class="fab fa-instagram"></i></a>
+          </li> -->
+        </ul>
+        
+      </div>
+    </nav>
+  
+  </header>
+  <!--Main Navigation-->
+
+  <!-- Modals -->
+  <!-- album Modal -->
+  <div class="modal fade" id="albumDetails" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-image">
+                    <img class="modal-img" src="" alt="test"/>
+                </div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <div class="modal-title">
+                    <h5 class="album-name"></h5>
+                    <h5 class="album-artist"></h5>
+                </div>
+                
+            </div>
+            <h5>Tracks</h5>
+            <div class="modal-body"></div>
+    
+        </div>
+    </div>
+</div> 
+<!-- end album modal -->
+
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="loginModalLabel">Login</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="resetLogin()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="authError"></div>
+        <input type="email" id="email" name="email" placeholder="Email">
+        <input type="password" id="password" name="password" placeholder="password">
+      </div>
+      <div class="modal-footer">
+        <button disabled type="button" class="btn" id="quickstart-sign-in" name="signin">Sign In</button>
+        <button type="button" class="btn" id="quickstart-sign-up" name="signup">Sign up</button>
+        <button disabled type="button" class="btn" id="quickstart-verify-email" name="verify-email">Send Email Verification</button>
+        <button type="button" class="btn" id="quickstart-password-reset" name="verify-email">Send Password Reset Email</button>
+        <button type="button" class="btn" data-dismiss="modal" onclick="resetLogin()">Close</button>
+        
+
+        <!-- Container where we'll display the user details -->
+        <div class="quickstart-user-details-container hide">
+          Firebase sign-in status: <span id="quickstart-sign-in-status">Unknown</span>
+          <div>Firebase auth <code>currentUser</code> object value:</div>
+          <pre><code id="quickstart-account-details">null</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

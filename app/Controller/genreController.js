@@ -20,7 +20,7 @@ angular.module('genreModule').controller('genreController', ['$scope', '$http', 
 
   $http({
     method: 'get', 
-    url: 'http://api.napster.com/v2.2/genres?apikey=your_napster_apiKey'
+    url: 'https://api.napster.com/v2.2/genres?your_napster_api_key'
     
   }).then(function (response) {
       
@@ -44,7 +44,7 @@ angular.module('genreModule').controller('genreController', ['$scope', '$http', 
     $scope.songs = []; 
     $http({
       method: 'get', 
-      url: 'http://api.napster.com/v2.2/genres/'+genreid+'/tracks/top?apikey=your_napster_apiKey'
+      url: 'https://api.napster.com/v2.2/genres/'+genreid+'/tracks/top?your_napster_api_key'
       
     }).then(function (response) {
         

@@ -1,0 +1,23 @@
+<div ng-controller="genreController">
+    <div class="title-banner container">
+        <h2 class="page-title">{{title}}</h2>
+    </div>
+    <div class="songs-wrapper">
+        <a ng-repeat="song in songs" class="card" id={{song.id}}>
+            <div class="card-image">
+                <img src={{song.image}} alt={{song.name}}/>
+                <div class="player">
+                    <button ng-click="playSound(song.audioUrl, song.id);" class="btn-player fas fa-play play"></button>
+                    <button ng-click="pauseSound(song.id);" class="btn-player fas fa-stop stop"></button>
+                </div>
+            </div>
+            <div class="card-data">
+                <p> {{song.name}} - {{song.artist}}</p>
+                <div class="tags-icons fas fa-dot-circle">
+                    {{song.album}}
+                </div>
+            </div>
+            
+        </a>
+    </div>
+</div>

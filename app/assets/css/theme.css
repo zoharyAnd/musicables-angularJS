@@ -5738,6 +5738,12 @@ input:checked + .slider:before {
   flex-wrap: wrap;
   align-items: center; }
 
+.whiteContent {
+  color: white; }
+
+.hide {
+  display: none; }
+
 #artistDetails .modal-dialog {
   max-width: 100%;
   margin: 25px; }
@@ -5772,6 +5778,36 @@ input:checked + .slider:before {
   color: gray;
   font-style: italic; }
 
+.artist-details-banner {
+  position: relative;
+  margin-bottom: 25px; }
+
+.artist-details-image {
+  height: 300px;
+  overflow: hidden; }
+  .artist-details-image img {
+    width: 100%; }
+
+.artist-details-name {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(50, 49, 49, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  text-transform: capitalize;
+  font-size: 40px;
+  padding-bottom: 25px; }
+
+.artist-detail-albums {
+  margin-bottom: 0;
+  font-weight: 500;
+  border-top: 1px solid #6e6e6e;
+  padding: 25px 0;
+  font-size: 27px; }
+
 .songs-wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -5790,6 +5826,39 @@ input:checked + .slider:before {
   margin-top: 30px; }
   .card-data p {
     text-transform: capitalize; }
+
+#loginModal .modal-title {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+#loginModal .modal-body {
+  display: block; }
+  #loginModal .modal-body input {
+    width: 100%;
+    margin: 10px 0;
+    background-color: #e7e7e7;
+    height: 40px;
+    border: none;
+    border-radius: 25px;
+    padding: 0 20px; }
+
+#loginModal .modal-footer {
+  display: block; }
+  #loginModal .modal-footer button {
+    margin: 10px; }
+
+#username {
+  color: white;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 25px; }
+
+.authError {
+  background-color: #f1dbe4;
+  padding: 10px;
+  border-radius: 5px; }
 
 nav, footer {
   background-color: black; }

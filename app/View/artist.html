@@ -1,0 +1,51 @@
+<div ng-controller="artistController">
+    <div class="title-banner container">
+        <h2 class="page-title">Top Artists</h2>
+        <div class="input-group search-bar" [ngClass]="{'input-group-focus':focus1===true}">
+            <input id="searched-artist" type="text" class="form-control" placeholder="Search artist ..." (focus)="focus1=true" (blur)="focus1=false">
+            <div class="input-group-append">
+              <span class="input-group-text">
+                  <i class="now-ui-icons users_single-02"></i>
+              </span>
+            </div>
+        </div>
+        <button class="btn btn-search" ng-click="searchArtist();"><i class="fas fa-search"></i></button>
+    </div>
+    
+    <div class="songs-wrapper top-artists">
+        <a ng-repeat="artist in artists" class="card album-card" id={{artist.id}} type="button" href="/#!/artist/{{artist.name}}">
+            <div class="card-image">
+                <img src={{artist.image}} alt={{artist.name}}/>
+                <div class="tags-icons two-col nb-tracks">
+                    <div>
+                        <i class="fas fa-music"></i>
+                        {{artist.nbAlbums}} Albums
+                    </div>
+                    <div>
+                        {{artist.name}}
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <div class="songs-wrapper searched-artists">
+        <a ng-repeat="artist in searchedArtists" class="card album-card" id={{artist.id}} type="button" href="/#!/artist/{{artist.name}}">
+            <div class="card-image">
+                <img src={{artist.image}} alt={{artist.name}}/>
+                <div class="tags-icons two-col nb-tracks">
+                    <div>
+                        <i class="fas fa-music"></i>
+                        {{artist.nbAlbums}} Albums
+                    </div>
+                    <div>
+                        {{artist.name}}
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+
+</div>
+
+
