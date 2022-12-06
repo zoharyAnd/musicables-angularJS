@@ -22,7 +22,7 @@
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
     "gulp-sass": "^4.0.2",
-    "http-server": "^0.11.1",
+    "http-server": "^0.11.2",
     "jasmine-core": "^3.3.0",
     "jquery": "^3.4.1",
     "jw-bootstrap-switch-ng2": "^2.0.5",
